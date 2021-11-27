@@ -4,52 +4,48 @@
     {
         static void Main(string[] args)
         {
-            static double ConverterMS(int distance, int hour, int minutes, int seconds)
-            {
-                int minuteConst = 60;
-                int allInSecondsI = hour * minuteConst * minuteConst + minutes * minuteConst + seconds;
-                double speedMS = (double)distance / (double)allInSecondsI;
-                return speedMS;
-            }
-            static double ConverterMH(int distance, int hour, int minutes, int seconds) 
-            {
-                int minuteConst = 60;
-                double minuteConstD = 60;
-                double distanceMH = (double)distance / 1609;
-                double allInHours = (double)hour + (double)minutes / minuteConstD + ((double)seconds / (minuteConst * minuteConstD));
-                double speedMH = distanceMH / allInHours;
-                return speedMH;
-            }
-            static double ConverterKmH(int distance, int hour, int minutes, int seconds)
-            {
-                int minuteConst = 60;
-                double minuteConstD = 60;
-                double distanceKm = (double)distance / 1000;
-                double allInHours = (double)hour + (double)minutes / minuteConstD + ((double)seconds / (minuteConst * minuteConstD));
-                double speedKmH = distanceKm / allInHours;
-                return speedKmH;
-            }
             Console.WriteLine("Input distance in meters:");
-            string inputDataDistance = Console.ReadLine();
+            string inputDistance = Console.ReadLine();
             Console.WriteLine("Input hour:");
-            string inputDataHours = Console.ReadLine();
+            string inputHours = Console.ReadLine();
             Console.WriteLine("Input minutes:");
-            string inputDataMinutes = Console.ReadLine();
+            string inputMin = Console.ReadLine();
             Console.WriteLine("Input seconds:");
-            string inputDataSeconds = Console.ReadLine();
+            string inputSec = Console.ReadLine();
 
-            int inputDataHoursI = int.Parse(inputDataHours);
-            int inputDataMinutesI = int.Parse(inputDataMinutes);
-            int inputDataSecondsI = int.Parse(inputDataSeconds);
-            int inputDataDistanceI = int.Parse(inputDataDistance);
-
-            double result1 = ConverterMS(inputDataDistanceI, inputDataHoursI, inputDataMinutesI, inputDataSecondsI);
-            double result2 = ConverterKmH(inputDataDistanceI, inputDataHoursI, inputDataMinutesI, inputDataSecondsI);
-            double result3 = ConverterMH(inputDataDistanceI, inputDataHoursI, inputDataMinutesI, inputDataSecondsI);
+            double inputHoursI = double.Parse(inputHours);
+            double inputMinD = double.Parse(inputMin);
+            double inputSecD = double.Parse(inputSec);
+            double inputDistanceI = double.Parse(inputDistance);
             
-            Console.WriteLine("Your speed in meters/second is " + result1);
-            Console.WriteLine("Your speed in km/h is " + result2);
-            Console.WriteLine("Your speed in miles/h is " + result3);
+            ConverterMS(inputDistanceI, inputHoursI, inputMinD, inputSecD);
+            ConverterKmH(inputDistanceI, inputHoursI, inputMinD, inputSecD);
+            ConverterMH(inputDistanceI, inputHoursI, inputMinD, inputSecD);
+
+            static void ConverterMS(double distance, double hour, double min, double sec)
+            {
+                double minConst = 60;
+                double allInSeconds = hour * minConst * minConst + min * minConst + sec;
+                double speedMS = distance / allInSeconds;
+                Console.WriteLine("Your speed in meters/second is " + speedMS);
+            }
+            
+             static void ConverterMH(double distance, double hour, double min, double sec) 
+            {
+                double minConst = 60;
+                double distanceMH = distance / 1609;
+                double allInHours = hour + min / minConst + (sec / (minConst * minConst));
+                double speedMH = distanceMH / allInHours;
+                Console.WriteLine("Your speed in miles/h is " + speedMH);
+            }
+            static void ConverterKmH(double distance, double hour, double min, double sec)
+            {
+                double minConst = 60;
+                double distanceKm = distance / 1000;
+                double allInHours = hour + min / minConst + (sec / (minConst * minConst));
+                double speedKmH = distanceKm / allInHours;
+                Console.WriteLine("Your speed in km/h is " + speedKmH);
+            }
         }
     }
 }
