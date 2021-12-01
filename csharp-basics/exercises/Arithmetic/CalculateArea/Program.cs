@@ -19,6 +19,10 @@ namespace CalculateArea
             {
                 CalculateTriangleArea();
             }
+            else if (userChoice == 4)
+            {
+                Environment.Exit(0);
+            }
         }
 
         public static int GetMenu()
