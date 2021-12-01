@@ -30,7 +30,7 @@
                 Console.WriteLine("Your speed in meters/second is " + speedMS);
             }
             
-             static void ConverterMH(double distance, double hour, double min, double sec) 
+            static void ConverterMH(double distance, double hour, double min, double sec) 
             {
                 double minConst = 60;
                 double distanceMH = distance / 1609;
@@ -38,6 +38,7 @@
                 double speedMH = distanceMH / allInHours;
                 Console.WriteLine("Your speed in miles/h is " + speedMH);
             }
+
             static void ConverterKmH(double distance, double hour, double min, double sec)
             {
                 double minConst = 60;
