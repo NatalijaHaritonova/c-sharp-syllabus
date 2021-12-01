@@ -15,7 +15,7 @@
             double heightI = height / inchCoff;
             double indexBMI = weightP * 703 / Math.Pow(heightI, 2);
 
-            if (indexBMI > 18.5 && indexBMI < 25)
+            if (indexBMI >= 18.5 && indexBMI <= 25)
             {
                 Console.WriteLine("person's weight is optimal");
             }
