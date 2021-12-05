@@ -23,7 +23,7 @@ namespace LargestNumber
             {
                 Console.WriteLine(input2 + " is largest of entered numbers");
             }
-            else if (input3 > input1 && input3 > input2)
+            else
             {
                 Console.WriteLine(input3 + " is largest of entered numbers");
             }
