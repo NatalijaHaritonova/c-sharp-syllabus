@@ -4,76 +4,42 @@ namespace TenBillion
 {
     class Program
     {
-        //TODO Write a C# program that reads an positive integer and count the number of digits the number (less than ten billion) has.
         static void Main(string[] args)
         {
             Console.WriteLine("Input an integer number less than ten billion: ");
 
             var input = Console.ReadLine();
+            Int64 result;
 
-            /*
-            todo - check if Long
-            if (?) 
+            if (Int64.TryParse(input, out result)) 
             {
-                //todo - check if n is less than zero
-                if (?) 
+                if (result < 0) 
                 {
-                    n *= -1;
+                    result *= -1;
                 }
 
-                fixme
-                if (?) 
+                if (result >= 10000000000) 
                 {
                     Console.WriteLine("Number is greater or equals 10,000,000,000!");
                 } 
                 else 
                 {
+                    int numOfDigits = result.ToString().Length;
                     int digits = 1;
-                    if (?) 
+                    for (int i = 0; i < numOfDigits; i++)
                     {
-                        digits = 2;
-                    } 
-                    else if (?) 
-                    {
-                        digits = 3;
-                    } 
-                    else if (?) 
-                    {
-                        digits = 4;
-                    } 
-                    else if (?) 
-                    {
-                        digits = 5;
-                    } 
-                    else if (?) 
-                    {
-                        digits = 6;
-                    } 
-                    else if (?) 
-                    {
-                        digits = 7;
-                    } 
-                    else if (?) 
-                    {
-                        digits = 8;
-                    } 
-                    else if (?) 
-                    {
-                        digits = 9;
-                    } 
-                    else if (?) 
-                    {
-                        digits = 10;
+                        if (numOfDigits > digits)
+                            digits++;
                     }
-
                     Console.WriteLine("Number of digits in the number: " + digits);
+                    Console.ReadKey();
                 }
             } 
             else 
             {
                 Console.WriteLine("The number is not a long");
             }
-            */
+            Console.ReadKey();
         }
     }
 }
