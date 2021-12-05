@@ -51,8 +51,7 @@
                 else
                 {
                     Console.WriteLine("Not a valid day");
-                }
-                   
+                } 
             }
         }
     }
