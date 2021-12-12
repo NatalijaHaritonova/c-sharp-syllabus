@@ -19,7 +19,7 @@ namespace Exercise5
                 {
                     indexOfElement36 = i;
                 }
-                else if (myArray[i] == value2)
+                if (myArray[i] == value2)
                 {
                     indexOfElement29 = i;
                 }
