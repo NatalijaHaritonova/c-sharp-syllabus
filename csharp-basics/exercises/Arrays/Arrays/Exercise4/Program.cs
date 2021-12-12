@@ -13,24 +13,15 @@ namespace Exercise4
                 1456, 2265, 1457, 2456
             };
 
-            var count = 0;
-            int toFind = 1245;
+            int toFind = 2000;
 
-            for (int i = 0; i < myArray.Length; i++) 
-            {
-                if (myArray[i] == toFind)
-                {
-                    count++;
-                }
-            }
-
-            if (count > 0)
+            if (Array.Exists(myArray, x => x == toFind))
             {
                 Console.WriteLine("Contains!");
             }
             else
             {
-                Console.WriteLine("Do not contain");
+                Console.WriteLine("Do not contain.");
             }
 
             Console.ReadKey();
