@@ -15,7 +15,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoStore", "VideoStore\Vi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise1", "Exercise1\Exercise1.csproj", "{709E0CAD-C0D4-4DC9-BEC5-928CFF3C4ADB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise3", "Exercise3\Exercise3.csproj", "{6307BB71-7C17-4B46-806F-30085EF4FE29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise3", "Exercise3\Exercise3.csproj", "{6307BB71-7C17-4B46-806F-30085EF4FE29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise4", "Exercise4\Exercise4.csproj", "{6A56363E-522F-47FF-8BDB-B66498F4F01C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{6307BB71-7C17-4B46-806F-30085EF4FE29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6307BB71-7C17-4B46-806F-30085EF4FE29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6307BB71-7C17-4B46-806F-30085EF4FE29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A56363E-522F-47FF-8BDB-B66498F4F01C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A56363E-522F-47FF-8BDB-B66498F4F01C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A56363E-522F-47FF-8BDB-B66498F4F01C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A56363E-522F-47FF-8BDB-B66498F4F01C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
