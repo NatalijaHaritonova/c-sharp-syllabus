@@ -5,10 +5,10 @@ namespace VideoStore
 {
     class Video
     {
-        public double _rating {get; set;} = 0;
+        private double _rating = 0;
         public string _title { get; set; }
-        public int _countiked { get; set; } = 0;
-        public int _count { get; set; } = 0;
+        private int _countiked = 0;
+        private int _count = 0;
         public bool _checkedOut { get; set; }
 
         public Video(string title)

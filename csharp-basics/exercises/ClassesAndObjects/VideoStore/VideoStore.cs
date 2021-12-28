@@ -6,9 +6,9 @@ namespace VideoStore
     class VideoStore
     {
         private List<string> videoStore = new List<string>();
-        public static Video theMatrix { get; set; } = new Video("The Matrix");
-        public static Video godWars { get; set; } = new Video("Godfather II");
-        public static Video starWars { get; set; } = new Video("Star Wars Episode IV: A New Hope");
+        private static Video theMatrix = new Video("The Matrix");
+        private static Video godWars = new Video("Godfather II");
+        private static Video starWars = new Video("Star Wars Episode IV: A New Hope");
 
         public VideoStore()
         {
