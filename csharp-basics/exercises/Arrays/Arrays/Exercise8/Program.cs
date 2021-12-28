@@ -12,6 +12,7 @@ namespace Exercise8
         private static char[] wordToGuess = words[index].ToCharArray();
         private static string guessed = "";
         private static string missed = "";
+
         private static void Main(string[] args)
         {
             InitTable();
@@ -53,6 +54,7 @@ namespace Exercise8
             Console.WriteLine();
             Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-");
         }
+
         private static void PlayGame()
         {
             int letterNum = words[index].Length;
@@ -92,9 +94,9 @@ namespace Exercise8
             Console.WriteLine("You win!");
             Console.ReadKey();
         }
+
         private static void WinTest()
         {
-
             char[] cHiddenWord = hiddenWord.ToCharArray();
             char underL = '_';
             int index = Array.IndexOf(cHiddenWord, underL);
