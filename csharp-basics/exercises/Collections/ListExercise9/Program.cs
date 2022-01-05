@@ -31,8 +31,10 @@ namespace ListExercise9
             };
 
             Console.WriteLine(string.Join(",", secondList));
-            //TODO: Write a C# program to join two lists.
-            //...
+
+            var result = new List <string>(firstList.Concat(secondList));
+            Console.WriteLine(String.Join(",", result));
+            Console.ReadKey();
         }
     }
 }
