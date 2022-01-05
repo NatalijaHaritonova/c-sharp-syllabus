@@ -19,7 +19,15 @@ namespace ListExercise7
                 "Black"
             };
 
-            //      TODO: Check if list contains "White" element
+            if (colors.IndexOf("White") >= 0)
+            {
+                Console.WriteLine("List contains mentioned element");
+            }
+            else
+            {
+                Console.WriteLine("List do not contains mentioned element");
+            }
+            Console.ReadKey();
         }
     }
 }
