@@ -21,9 +21,10 @@ namespace ListExercise5
 
             Console.WriteLine(string.Join(",", colors));
 
-            //TODO: Change the third element with "Yellow"
+            colors[2] = "Yellow";
 
             Console.WriteLine(string.Join(",", colors));
+            Console.ReadKey();
         }
     }
 }
