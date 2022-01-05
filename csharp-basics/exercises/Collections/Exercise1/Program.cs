@@ -1,32 +1,50 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Exercise1
 {
     class Program
     {
-        /**
-           * Origination:
-           * Audi -> Germany
-           * BMW -> Germany
-           * Honda -> Japan
-           * Mercedes -> Germany
-           * VolksWagen -> Germany
-           * Tesla -> USA
-           */
-
         private static void Main(string[] args)
         {
             string[] array = { "Audi", "BMW", "Honda", "Mercedes", "VolksWagen", "Mercedes", "Tesla" };
+            string[] origination = { "Germany", "Germany" , "Japan", "Germany" , "Germany" , "USA"};
+            
 
-            //todo - replace array with an List and print out the results
+            List <string> newArray = new List <string> ();
+            for (int i = 0; i < array.Length; i++)
+            {
+                newArray.Add(array[i]);
+            }
+            for (int i = 0;i < array.Length; i++)
+            {
+                Console.Write(newArray[i]+ ",");
+            }
+            Console.WriteLine();
 
-            //todo - replace array with a HashSet and print out the results
+            HashSet<string> arrayHashSet = new HashSet<string> ();
 
-            //todo - replace array with a Dictionary (use brand as key and origination as value) and print out the results
+            for (int i = 0;i < array.Length; i++)
+            {
+                arrayHashSet.Add(array[i]);
+            }
+            Console.WriteLine(String.Join(",", arrayHashSet));
+            Console.WriteLine();
+            
+            List <string> arrAfterHash = new List<string> (arrayHashSet);
+            Dictionary <string, string> dictArr = new Dictionary<string, string> ();
+
+            for (int i = 0; i < arrAfterHash.Count; i++)
+            {
+                dictArr.Add(arrAfterHash[i], origination[i]);
+            }
+            
+            foreach (KeyValuePair<string, string> kv in dictArr)
+            {
+                Console.WriteLine(kv.ToString());
+            }
+            Console.ReadKey();
         }
     }
 }
