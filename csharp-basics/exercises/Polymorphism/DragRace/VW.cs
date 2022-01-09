@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 
 namespace DragRace
 {
-    public class Audi : ICar
+    internal class VW : ICar
     {
         private int currentSpeed = 0;
 
@@ -11,19 +11,19 @@ namespace DragRace
             currentSpeed += speed;
         }
 
-        public void SlowDown(int speed) 
+        void ICar.SlowDown(int speed)
         {
             currentSpeed -= speed;
         }
 
-        public string ShowCurrentSpeed() 
+        string ICar.ShowCurrentSpeed()
         {
             return currentSpeed.ToString();
         }
 
-        public void StartEngine() 
+        void ICar.StartEngine()
         {
-            Console.WriteLine("Rrrrrrr.....");
+            Console.WriteLine("Trtrtr.....");
         }
     }
 }
