@@ -31,6 +31,6 @@ namespace Firm
         // Derived classes must define the pay method for each type of
         // employee.
         //-----------------------------------------------------------------
-        public abstract double Pay();
+        public abstract double Pay { get; }
     }
 }

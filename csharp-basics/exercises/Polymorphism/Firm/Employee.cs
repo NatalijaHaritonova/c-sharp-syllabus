@@ -1,5 +1,3 @@
-using System;
-
 namespace Firm
 {
     public class Employee : StaffMember
@@ -31,9 +29,6 @@ namespace Firm
         //-----------------------------------------------------------------
         // Returns the pay rate for this employee.
         //-----------------------------------------------------------------
-        public override double Pay()
-        {
-            return payRate;
-        }
+        public override double Pay { get { return payRate; } }
     }
 }

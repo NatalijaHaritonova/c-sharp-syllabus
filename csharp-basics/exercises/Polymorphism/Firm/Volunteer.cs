@@ -5,16 +5,11 @@ namespace Firm
         //-----------------------------------------------------------------
         // Sets up a volunteer using the specified information.
         //-----------------------------------------------------------------
-        public Volunteer(string eName, string eAddress, string ePhone) : base(eName, eAddress, ePhone)
-        {
-        }
+        public Volunteer(string eName, string eAddress, string ePhone) : base(eName, eAddress, ePhone) { }
 
         //-----------------------------------------------------------------
         // Returns a zero pay value for this volunteer.
         //-----------------------------------------------------------------
-        public override double Pay()
-        {
-            return 0.0;
-        }
+        public override double Pay { get { return 0.0; } }
     }
 }
