@@ -38,6 +38,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GravityCalculatorTests", "G
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise8Tests", "Exercise8Tests\Exercise8Tests.csproj", "{C5C04BC3-9A26-4624-9308-18D93102E000}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculateAreaTests", "CalculateAreaTests\CalculateAreaTests.csproj", "{9696EA55-B64A-445A-9C12-0546663279CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -104,6 +106,10 @@ Global
 		{C5C04BC3-9A26-4624-9308-18D93102E000}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5C04BC3-9A26-4624-9308-18D93102E000}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5C04BC3-9A26-4624-9308-18D93102E000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9696EA55-B64A-445A-9C12-0546663279CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9696EA55-B64A-445A-9C12-0546663279CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9696EA55-B64A-445A-9C12-0546663279CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9696EA55-B64A-445A-9C12-0546663279CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

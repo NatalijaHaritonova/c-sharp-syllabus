@@ -59,7 +59,6 @@ namespace CalculateArea
                 Console.WriteLine("Radius must be > 0.");
                 Console.ReadKey();
             }
-            
         }
 
         public static void CalculateRectangleArea()
