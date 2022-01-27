@@ -19,7 +19,7 @@
 
         public void Drive()
         {
-            if (_mileage < 999.999 && _fuelGauge.FuelCheck() == true)
+            if (_mileage < 999.999 && _fuelGauge.FuelIsLargerThanZero() == true)
             {
                 _mileage += 1;
                 _count += 1;
@@ -30,7 +30,7 @@
                     _fuelGauge.Decrement();
                 }
             }
-            else if (_mileage < 999.999 && _fuelGauge.FuelCheck() == false)
+            else if (_mileage < 999.999 && _fuelGauge.FuelIsLargerThanZero() == false)
             {
                 Console.WriteLine("Not enough fuel");
             }

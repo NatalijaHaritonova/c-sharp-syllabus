@@ -42,16 +42,9 @@
             }
         }
 
-        public bool FuelCheck()
+        public bool FuelIsLargerThanZero()
         {
-            if (_litersOfFuel > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return _litersOfFuel > 0;
         }
     }
 }
