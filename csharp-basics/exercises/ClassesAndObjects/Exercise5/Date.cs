@@ -2,20 +2,20 @@
 {
     internal class Date
     {
-        public int _year { get; set; }
-        public int _month { get; set; }
-        public int _day { get; set; }
+        public int Year { get; set; }
+        public int Month { get; set; }
+        public int Day { get; set; }
 
         public Date(int year, int month, int day)
         {
-            _year = year;
-            _month = month;
-            _day = day;
+            Year = year;
+            Month = month;
+            Day = day;
         }
 
         public string DisplayDate()
         {
-            return $"{_month}/{_day}/{_year}";
+            return $"{Month}/{Day}/{Year}";
         }
     }
 }
