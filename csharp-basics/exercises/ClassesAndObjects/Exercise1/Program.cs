@@ -31,7 +31,6 @@
             _name = name;
             _price = priceAtStart;
             _amount = amountAtStart;
-
         }
 
         public void PrintProduct()
