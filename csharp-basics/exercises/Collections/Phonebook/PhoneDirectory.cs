@@ -14,7 +14,7 @@ namespace PhoneBook
 
         public string GetNumber(string name) 
         {
-            if (GetName(name)) 
+            if (DataContainsName(name)) 
             {
                 return _data[name];
             } 
@@ -31,7 +31,7 @@ namespace PhoneBook
                 throw new Exception("name and number cannot be null");
             }
 
-            if (GetName(name)) 
+            if (DataContainsName(name)) 
             {
                 _data[name] = number;
             }
@@ -41,16 +41,9 @@ namespace PhoneBook
             }
         }
 
-        public bool GetName(string name)
+        public bool DataContainsName(string name)
         {
-            if (_data.ContainsKey(name))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return _data.ContainsKey(name);
         }
     }
 }
