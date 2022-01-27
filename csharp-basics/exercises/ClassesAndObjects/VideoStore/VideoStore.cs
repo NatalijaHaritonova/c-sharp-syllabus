@@ -59,11 +59,11 @@ namespace VideoStore
 
         public Video ChooseVideo(string title)
         {
-            if (theMatrix._title == title)
+            if (theMatrix.Title == title)
             {
                 return theMatrix;
             }
-            else if (godWars._title == title)
+            else if (godWars.Title == title)
             {
                 return godWars;
             }

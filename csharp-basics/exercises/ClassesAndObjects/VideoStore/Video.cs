@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace VideoStore
 {
     class Video
     {
-        private double _rating = 0;
-        public string _title { get; set; }
-        private int _countiked = 0;
-        private int _count = 0;
+        private List<int> _rating = new List<int>();
+        public string Title { get; set; }
+        private int _countLiked = 0;
         public bool _checkedOut { get; set; }
 
         public Video(string title)
         {
-            _title = title;
+            Title = title;
         }
 
         public void BeingCheckedOut()
@@ -28,18 +28,14 @@ namespace VideoStore
 
         public void ReceivingRating(int rating)
         {
-            _rating += rating;
+            _rating.Add(rating);
             if (rating > 5)
             {
-                _countiked++;
-                _count++;
+                _countLiked++;
             }
-            else
-            {
-                _count++;
-            }
-            double percentage = _countiked * 100 / _count;
-            if (_countiked > 0)
+            double percentage = _countLiked * 100 / _rating.Count;
+
+            if (_countLiked > 0)
             {
                 Console.WriteLine($"{percentage}% liked this movie");
             }
@@ -51,24 +47,18 @@ namespace VideoStore
 
         public double AverageRating()
         {
-            return Math.Round(_rating / _count, 1);
+            double total = _rating.Sum(x => Convert.ToInt32(x));
+            return Math.Round(total/_rating.Count, 1);
         }
 
-        public bool Available()
+        public bool NotAvailable()
         {
-            if (_checkedOut)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return _checkedOut;
         }
 
         public override string ToString()
         {
-            return $"{_title}  rating: {AverageRating()} : available : {Available()}";
+            return $"{Title}  rating: {AverageRating()} : Not available : {NotAvailable()}";
         }
     }
 }
