@@ -11,7 +11,7 @@ namespace TicTacToe
         private static char xChar = 'X';
         private static char oChar = 'O';
         private static char turn;
-        private static bool winCheck = false;
+        private static bool someoneWins = false;
 
         private static void Main(string[] args)
         {
@@ -25,7 +25,7 @@ namespace TicTacToe
                 if (count >= 5)
                 {
                     WinTest();
-                    if (winCheck)
+                    if (someoneWins)
                     {
                         break;
                     }
@@ -55,14 +55,7 @@ namespace TicTacToe
 
         private static void Turn()
         {
-            if (count % 2 == 0)
-            {
-                turn = oChar;
-            }
-            else
-            {
-                turn = xChar;
-            }
+            turn = count % 2 == 0 ? oChar : xChar;
             Console.WriteLine($"{turn}, Chose your location(row,column):");
             int[] move = Console.ReadLine().Split(',').Select(n => Convert.ToInt32(n)).ToArray();
             board[move[0], move[1]] = turn;
@@ -83,7 +76,7 @@ namespace TicTacToe
                 turn == board[2, 0] && board[2, 0] == board[1, 1] && board[1, 1] == board[0, 2])
             {
                 Console.WriteLine($"{turn} win!");
-                winCheck = true;
+                someoneWins = true;
             }
             else
             {
