@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Exercise7
+﻿namespace Exercise7
 {
     internal class Dog
     {
@@ -38,14 +32,7 @@ namespace Exercise7
 
         public bool HasSameMotherAs(Dog other)
         {
-            if (_mother._name == other._mother._name)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return _mother._name == other._mother._name;
         }
     }
 }
