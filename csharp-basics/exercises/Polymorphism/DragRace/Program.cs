@@ -26,7 +26,7 @@ namespace DragRace
                         car.StartEngine();
                         car.SpeedUp(5);
                     }
-                    if (i == 3)
+                    else if (i == 3)
                     {
                         if (car is INitro boostable)
                         {

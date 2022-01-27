@@ -6,7 +6,7 @@ namespace DragRace
     {
         private int currentSpeed = 0;
 
-        void ICar.SpeedUp(int speed)
+        public void SpeedUp(int speed)
         {
             currentSpeed += speed;
         }

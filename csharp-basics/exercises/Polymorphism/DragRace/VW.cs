@@ -6,22 +6,22 @@ namespace DragRace
     {
         private int currentSpeed = 0;
 
-        void ICar.SpeedUp(int speed)
+        public void SpeedUp(int speed)
         {
             currentSpeed += speed;
         }
 
-        void ICar.SlowDown(int speed)
+        public void SlowDown(int speed)
         {
             currentSpeed -= speed;
         }
 
-        string ICar.ShowCurrentSpeed()
+        public string ShowCurrentSpeed()
         {
             return currentSpeed.ToString();
         }
 
-        void ICar.StartEngine()
+        public void StartEngine()
         {
             Console.WriteLine("Trtrtr.....");
         }
