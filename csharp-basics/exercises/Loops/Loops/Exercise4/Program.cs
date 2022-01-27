@@ -12,9 +12,9 @@ namespace Exercise4
                     Console.WriteLine(vowels[i]);
                 }
 
-            foreach (char o in vowels)
+            foreach (char vowel in vowels)
             {
-                Console.WriteLine(o);
+                Console.WriteLine(vowel);
             }
 
             Console.ReadKey();
