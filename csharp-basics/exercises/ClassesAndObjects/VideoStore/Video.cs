@@ -1,44 +1,64 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace VideoStore
 {
     class Video
     {
+        private List<int> _rating = new List<int>();
+        public string Title { get; set; }
+        private int _countLiked = 0;
+        public bool CheckedOut { get; set; }
+
         public Video(string title)
         {
-            
+            Title = title;
         }
 
         public void BeingCheckedOut()
         {
-            
+            CheckedOut = true;
         }
 
         public void BeingReturned()
         {
-            
+            CheckedOut = false;
         }
 
-        public void ReceivingRating(double rating)
+        public void ReceivingRating(int rating)
         {
-            
+            _rating.Add(rating);
+            if (rating > 5)
+            {
+                _countLiked++;
+            }
+            double percentage = _countLiked * 100 / _rating.Count;
+
+            if (_countLiked > 0)
+            {
+                Console.WriteLine($"{percentage}% liked this movie");
+            }
+            else
+            {
+                Console.WriteLine("No one liked this movie yet");
+            }
         }
 
         public double AverageRating()
         {
-            return 0;
+            double total = _rating.Sum(x => Convert.ToInt32(x));
+            return Math.Round(total/_rating.Count, 1);
         }
 
-        public bool Available()
+        public bool NotAvailable()
         {
-            return true;
+            return CheckedOut;
         }
-
-        public string Title => "";
 
         public override string ToString()
         {
-            return $"{Title} {AverageRating()} {Available()}";
+            return $"{Title}  rating: {AverageRating()} : Not available : {NotAvailable()}";
         }
     }
 }
