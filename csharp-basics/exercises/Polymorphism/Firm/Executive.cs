@@ -12,6 +12,7 @@ namespace Firm
         {
             _bonus = 0; // bonus has yet to be awarded
         }
+
         //-----------------------------------------------------------------
         // Awards the specified bonus to this executive.
         //-----------------------------------------------------------------
@@ -24,11 +25,14 @@ namespace Firm
         // Computes and returns the pay for an executive, which is the
         // regular employee payment plus a one-time bonus.
         //-----------------------------------------------------------------
-        public override double Pay() 
-        {
-            var payment = base.Pay() + _bonus;
-            _bonus = 0;
-            return payment;
+        public override double Pay 
+        { 
+            get
+            {
+                    var payment = base.Pay + _bonus;
+                    _bonus = 0;
+                    return payment;
+            }
         }
     }
 }
