@@ -5,7 +5,7 @@ namespace AdApp
 {
     public class Campaign
     {
-        private List<Advert> campaign;
+        public List<Advert> campaign { get; }
 
         public Campaign() 
         {

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BankAccount
 {
@@ -10,6 +6,9 @@ namespace BankAccount
     {
         static void Main(string[] args)
         {
+            Account ben = new Account("Benson", 17.5);
+            Console.WriteLine(ben.ShowUserNameAndBalance());
+            Console.ReadKey();
         }
     }
 }
