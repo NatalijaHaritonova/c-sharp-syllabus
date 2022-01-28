@@ -11,8 +11,7 @@ namespace VideoStore
         private static Video starWars = new Video("Star Wars Episode IV: A New Hope");
 
         public VideoStore()
-        {
-            
+        { 
         }
 
         public void AddVideo(string title)
@@ -22,7 +21,7 @@ namespace VideoStore
         
         public void Checkout(string title)
         {
-            if (ChooseVideo(title)._checkedOut == false)
+            if (ChooseVideo(title).CheckedOut == false)
             {
                 ChooseVideo(title).BeingCheckedOut();
             }
@@ -34,7 +33,7 @@ namespace VideoStore
 
         public void ReturnVideo(string title)
         {
-            if (ChooseVideo(title)._checkedOut == true)
+            if (ChooseVideo(title).CheckedOut == true)
             {
                 ChooseVideo(title).BeingReturned();
             }

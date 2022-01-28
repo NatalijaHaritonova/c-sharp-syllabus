@@ -9,7 +9,7 @@ namespace VideoStore
         private List<int> _rating = new List<int>();
         public string Title { get; set; }
         private int _countLiked = 0;
-        public bool _checkedOut { get; set; }
+        public bool CheckedOut { get; set; }
 
         public Video(string title)
         {
@@ -18,12 +18,12 @@ namespace VideoStore
 
         public void BeingCheckedOut()
         {
-            _checkedOut = true;
+            CheckedOut = true;
         }
 
         public void BeingReturned()
         {
-            _checkedOut = false;
+            CheckedOut = false;
         }
 
         public void ReceivingRating(int rating)
@@ -53,7 +53,7 @@ namespace VideoStore
 
         public bool NotAvailable()
         {
-            return _checkedOut;
+            return CheckedOut;
         }
 
         public override string ToString()
