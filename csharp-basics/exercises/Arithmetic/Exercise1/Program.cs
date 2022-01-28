@@ -4,16 +4,11 @@
     {
         static void Main(string[] args)
         {
-            bool result = Is15(1, 23);
-            static bool Is15(int num1, int num2)
-            {
-                if (num1 == 15 || num2 == 15 || num1 + num2 == 15 || num1 - num2 == 15 || num2 - num1 == 15)
-                {
-                    return true;
-                }
-                return false;
-            }
-            Console.WriteLine(result.ToString());
+            Console.Write("Enter 1 number: ");
+            var userNum1 = int.Parse(Console.ReadLine());
+            Console.Write("Enter 2 number: ");
+            var userNum2 = int.Parse(Console.ReadLine());
+            Console.WriteLine(new Is15Check().Is15(userNum1, userNum2));
         }
     }
 }
