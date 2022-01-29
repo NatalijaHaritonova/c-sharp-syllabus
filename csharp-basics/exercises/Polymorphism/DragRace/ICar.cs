@@ -1,10 +1,10 @@
 ﻿namespace DragRace
 {
-    internal interface ICar
+    public interface ICar
     {
-        void SpeedUp(int speed);
-        void SlowDown(int speed);
+        int SpeedUp(int speed);
+        int SlowDown(int speed);
         string ShowCurrentSpeed();
-        void StartEngine();
+        string StartEngine();
     }
 }

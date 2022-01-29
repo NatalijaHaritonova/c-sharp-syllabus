@@ -2,18 +2,18 @@
 
 namespace DragRace
 {
-    internal class Subaru : ICar, INitro
+    public class Subaru : ICar, INitro
     {
         private int currentSpeed = 0;
 
-        public void SpeedUp(int speed)
+        public int SpeedUp(int speed)
         {
-            currentSpeed += speed;
+            return currentSpeed += speed;
         }
 
-        public void SlowDown(int speed)
+        public int SlowDown(int speed)
         {
-            currentSpeed -= speed;
+            return currentSpeed -= speed;
         }
 
         public string ShowCurrentSpeed()
@@ -21,14 +21,14 @@ namespace DragRace
             return currentSpeed.ToString();
         }
 
-        public void StartEngine()
+        public string StartEngine()
         {
-            Console.WriteLine("BRRM...BRRM..BRRR...");
+            return "BRRM...BRRM..BRRR...";
         }
 
-        public void UseNitrousOxideEngine()
+        public int UseNitrousOxideEngine()
         {
-            currentSpeed += 50;
+            return currentSpeed += 50;
         }
     }
 }
