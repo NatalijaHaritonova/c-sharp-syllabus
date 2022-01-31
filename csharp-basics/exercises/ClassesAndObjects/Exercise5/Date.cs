@@ -1,6 +1,6 @@
 ﻿namespace Exercise5
 {
-    internal class Date
+    public class Date
     {
         public int Year { get;}
         public int Month { get;}

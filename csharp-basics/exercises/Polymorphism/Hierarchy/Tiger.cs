@@ -1,6 +1,6 @@
 ﻿namespace Hierarchy
 {
-    internal class Tiger : Feline
+    public class Tiger : Feline
     {
         public Tiger(string name, string type, double weight,
             int foodEaten, string livingRegion) 

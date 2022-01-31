@@ -23,7 +23,7 @@ namespace DragRace
                 {
                     if (i == 1)
                     {
-                        car.StartEngine();
+                        Console.WriteLine(car.StartEngine());
                         car.SpeedUp(5);
                     }
                     else if (i == 3)

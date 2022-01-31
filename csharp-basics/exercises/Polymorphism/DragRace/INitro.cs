@@ -1,7 +1,7 @@
 ﻿namespace DragRace
 {
-    internal interface INitro
+    public interface INitro
     {
-        void UseNitrousOxideEngine();
+        int UseNitrousOxideEngine();
     }
 }
