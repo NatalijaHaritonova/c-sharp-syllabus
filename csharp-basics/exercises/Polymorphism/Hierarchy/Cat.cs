@@ -1,6 +1,6 @@
 ﻿namespace Hierarchy
 {
-    internal class Cat : Feline
+    public class Cat : Feline
     {
         private string _breed;
 
